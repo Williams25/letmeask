@@ -5,6 +5,9 @@
 - [React.js](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Firebase](https://firebase.google.com/?gclid=CjwKCAjwzruGBhBAEiwAUqMR8LZ4tI1kopaY8Bf3_5E1_Z94gOkS9yb7aEHHSVoDcrcfEW8jiAd9shoC7PAQAvD_BwE&gclsrc=aw.ds)
+- [Prettier](https://prettier.io/)
+- [Eslint](https://eslint.org/)
+- [Husk](https://typicode.github.io/husky/#/)
 
 ## ✋🏻 Pré-requisitos
 

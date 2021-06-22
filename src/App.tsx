@@ -1,7 +1,6 @@
 import React from "react";
 import { AuthProvider } from "context/AuthContext";
 import { RouterApp } from "Router";
-import { Button } from "components/Button";
 
 // eslint-disable-next-line
 const App = () => {

@@ -1,12 +1,17 @@
 import React from "react";
+import { AuthProvider } from "context/AuthContext";
+import { RouterApp } from "Router";
 import { Button } from "components/Button";
 
-function App() {
+// eslint-disable-next-line
+const App = () => {
   return (
     <div className="App">
-      <Button />
+      <AuthProvider>
+        <RouterApp />
+      </AuthProvider>
     </div>
   );
-}
+};
 
 export default App;

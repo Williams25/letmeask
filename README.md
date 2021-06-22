@@ -16,6 +16,19 @@
 
 ## 🔥 Instalação e execução
 
+- Crie um arquivo na raiz do projeto `.env.local` para armazenar as variáveis de conexão com o firebase
+
+  - .env.local
+
+              REACT_APP_MEASUREMENT_ID=
+              REACT_APP_APP_ID=
+              REACT_APP_MESSAGIN_SENDER_ID=
+              REACT_APP_STORAGE_ID=
+              REACT_APP_PROJECT_ID=
+              REACT_APP_DATABASE_URL=
+              REACT_APP_AUTH_DOMAIN=
+              REACT_APP_API_KEY=
+
 - Faça um clone desse repositório utilizando o camando `https://github.com/Williams25/letmeask.git`
 - Entre na pasta do projeto `cd letmeask` e logo após `code .`
 - Rode `yarn` para instalar as dependências

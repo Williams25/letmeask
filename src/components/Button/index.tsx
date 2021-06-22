@@ -1,9 +1,9 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
+import "styles/button.scss";
 
-export const Button = () => {
-  return (
-    <div>
-      <button>botão</button>
-    </div>
-  );
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+// eslint-disable-next-line
+export const Button = ({ ...rest }: ButtonProps) => {
+  return <button className="button" {...rest} />;
 };

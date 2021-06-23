@@ -4,7 +4,7 @@ import { RoomCode } from "components/RoomCode";
 import { database } from "services/firebase";
 import logoImg from "assets/images/logo.svg";
 import "styles/room.scss";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useAuth } from "hooks/useAuth";
 
 type RoomParams = {
@@ -29,9 +29,8 @@ const Room = () => {
   const [title, setTitle] = useState<string>("");
 
   const params = useParams<RoomParams>();
-  const history = useHistory();
 
-  const { user } = useAuth();
+  const { user, singInWithGoogle } = useAuth();
 
   const handleSendQuestion = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -115,7 +114,7 @@ const Room = () => {
                 Para enviar uma pergunta,{" "}
                 <button
                   onClick={() => {
-                    history.push("/");
+                    singInWithGoogle();
                   }}
                 >
                   faça seu login

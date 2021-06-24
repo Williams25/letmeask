@@ -13,6 +13,16 @@
       > img {
         max-height: 45px;
       }
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+          height: 40px;
+        }
+      }
     }
   }
   main {
@@ -20,6 +30,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 
     .room-title {
       margin: 32px 0 24px;
@@ -61,6 +72,7 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 1rem;
+        margin-bottom: 2rem;
 
         span {
           font-size: 14px;
@@ -85,8 +97,8 @@
           align-items: center;
 
           img {
-            width: 4rem;
-            height: 4rem;
+            width: 2.2rem;
+            height: 2.2rem;
             border-radius: 50%;
           }
 

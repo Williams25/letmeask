@@ -2,13 +2,13 @@
 
 ## :computer: [Layout](https://www.notion.so/Material-para-as-aulas-eb0804e137154e7e8c31d56dea8af99b)
 
-<div style="display: flex; flex-direction: column; gap: 1.5rem;
-justify-content: center; align-items: center">
-  <a href="https://www.notion.so/Material-para-as-aulas-eb0804e137154e7e8c31d56dea8af99b">
-    <img src="./public/logo.svg">
-  </a>
+  <h1 align="center">
+    <a href="https://www.notion.so/Material-para-as-aulas-eb0804e137154e7e8c31d56dea8af99b">
+      <img src="./public/logo.svg">
+    </a>
+  </h1>
+
   <img src="./public/layout.svg">
-</div>
 
 ## :dart: Tecnologias
 

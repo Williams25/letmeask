@@ -3,6 +3,8 @@ import { Button } from "components/Button";
 import { RoomCode } from "components/RoomCode";
 import logoImg from "assets/images/logo.svg";
 import deleteImg from "assets/images/delete.svg";
+import checkImg from "assets/images/check.svg";
+import answerImg from "assets/images/answer.svg";
 import "styles/room.scss";
 import { useRoom } from "hooks/useRoom";
 import { useParams, useHistory } from "react-router-dom";
@@ -32,6 +34,18 @@ const AdminRoom = () => {
     if (window.confirm("Tem certeza que deseja excluir está pergunta?")) {
       await database.ref(`rooms/${id}/questions/${questionId}`).remove();
     }
+  };
+
+  const handleCheckQuestionAsAnswer = async (questionId: string) => {
+    await database.ref(`rooms/${id}/questions/${questionId}`).update({
+      isAnswer: true
+    });
+  };
+
+  const handleHighlightQuestion = async (questionId: string) => {
+    await database.ref(`rooms/${id}/questions/${questionId}`).update({
+      isHighlighted: true
+    });
   };
 
   return (
@@ -67,7 +81,29 @@ const AdminRoom = () => {
                 key={index}
                 author={question.author}
                 content={question.content}
+                isAnswer={question.isAnswer}
+                isHighlighted={question.isHighlighted}
               >
+                {!question.isAnswer && (
+                  <>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleCheckQuestionAsAnswer(question.id);
+                      }}
+                    >
+                      <img src={checkImg} alt="responder pergunta" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        handleHighlightQuestion(question.id);
+                      }}
+                    >
+                      <img src={answerImg} alt="dar destaque a pergunta" />
+                    </button>
+                  </>
+                )}
                 <button
                   type="button"
                   onClick={() => {
